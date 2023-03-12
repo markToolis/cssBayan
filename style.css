@@ -17,27 +17,32 @@ body * {
 .container__title {
     padding: 0 0 1rem;
 }
-
 .img-1 {
     background-image: url('./img/hqdefault.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .img-2 {
     background-image: url('./img/i.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .img-3 {
     background-image: url('./img/images.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .img-4 {
     background-image: url('./img/n37toaQ6JxM.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .img-5 {
     background-image: url('./img/unnamed.png');
-}
-img {
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -47,7 +52,6 @@ img {
     display: block;
     width: 5%;
     transition: 1s;
-    rotate: -180deg;
     aspect-ratio: 4 / 4;
     background-image: url('./img/Childish-Cross_24996.png');
     background-repeat: no-repeat;
@@ -89,4 +93,45 @@ input:checked~label>.img {
     opacity: 1;
     transform: scale(1);
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+@media screen and (min-width: 860px) {
+    .img {
+      width: 60%;
+    }
+  }
+@media screen and (min-width: 1200px) {
+    .img {
+        width: 100%;
+      }
+  .container{
+    width: 40%;
+  }
+  label {
+    cursor: pointer;
+  }
+  input:hover ~ label {
+    color: rgb(9, 125, 48);
+  }
+  .cross-icon {
+    opacity: 0;
+  }
+  .css-bayan:hover .cross-icon {
+    opacity: 1;
+  }
+  input:hover ~ label > .cross-icon {
+    rotate: -180deg;
+    transition: 1s;
+  }
+  input:hover ~ label > .img {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    aspect-ratio: 4 / 4;
+  }
+  .css-bayan:hover span {
+    color: rgb(9, 125, 48);
+  }
+  .css-bayan:hover h1 {
+    color: rgb(9, 125, 48);
+  }
 }
